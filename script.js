@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Post-process is now handled inside renderer.render() to ensure consistency.
 
     if (result.success) {
-      downloadLink.href = renderer.getTransparentDataURL(250, '#000000');
+      downloadLink.href = renderer.getTransparentDataURL(250, options.color);
       downloadLink.download = result.filename;
       downloadLink.style.display = 'inline';
       downloadLink.textContent = '이미지 다운로드';
